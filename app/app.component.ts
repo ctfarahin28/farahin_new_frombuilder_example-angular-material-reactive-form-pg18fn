@@ -24,14 +24,6 @@ export class AppComponent {
     });
   }
 
-  getErrorEmail() {
-    return this.formGroup.get('email').hasError('required')
-      ? 'Field is required'
-      : this.formGroup.get('email').hasError('email')
-      ? 'Not a valid email address'
-      : '';
-  }
-
   onSubmit(post) {
     this.post = post;
   }
